@@ -2,7 +2,7 @@ import React from "react";
 import { experimentalStyled as styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import Service from "../Service/Service";
 
 const services = [
@@ -29,7 +29,15 @@ const services = [
 const Services = () => {
     return (
         <Container>
-            <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ marginTop: 8 }}>
+                <Typography variant="h5" sx={{ fontWeight: 600, letterSpacing: 0.5, marginBottom: 3, color: 'primary.main' }} component="div">
+                    OUR SERVICES
+                </Typography>
+                <Typography variant="h3" sx={{ fontWeight: 500 }} component="div">
+                    Services We Provide
+                </Typography>
+            </Box>
+            <Box sx={{ flexGrow: 1, marginTop: 10 }}>
                 <Grid
                     container
                     spacing={{ xs: 2, md: 3 }}
@@ -43,6 +51,7 @@ const Services = () => {
                             ></Service>
                         ))
                     }
+
                 </Grid>
             </Box>
         </Container>
